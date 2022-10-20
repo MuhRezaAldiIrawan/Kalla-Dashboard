@@ -1,0 +1,65 @@
+<div class="modal fade none-border" id="add">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><strong>Add New Car</strong></h4>
+            </div>
+            <div class="modal-body">
+              <form action="{!! url('/ecom-product-list'); !!}" method="POST" enctype="multipart/form-data">
+                @csrf
+                  <div class="card-body">
+                      <div class="form-group">
+                          <div class="form-label">Car Name</div>
+                          <input name="carname" class="form-control" id="carname" cols="30"
+                              rows="2" required></input>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-label">Unit Name</div>
+                        <input name="unitname" class="form-control" id="unitname" cols="30"
+                            rows="2" required></input>
+                      </div>
+                      <div class="form-group mt-4">
+                          <div class="form-label">Custom Type</div>
+                          <input type="text" class="form-control" name="customtype" id="customtype" required>
+                      </div>
+                      <div class="form-group mt-4">
+                          <div class="form-label">Color Type</div>
+                          <input type="text" class="form-control" name="colortype" id="colortype" required>
+                      </div>
+                      <div class="form-group mt-4">
+                        <div class="form-label">Price</div>
+                        <input type="text"  class="form-control" name="price" id="price" required>
+                      </div>
+                      <div class="form-group mt-4">
+                      <div class="form-label">Branch</div>
+                      <input type="text" class="form-control" name="branch" id="branch" required>
+                    </div>
+                    <div class="form-group mt-4">
+                      <div class="form-label">Customer Type</div>
+                      <input type="text" class="form-control" name="customertype" id="customertype" required>
+                    </div>
+                    <div class="form-group mt-4">
+                    <div class="form-label">Detail</div>
+                    <input id="detail" type="hidden" name="detail" required>
+                    <trix-editor input="detail"></trix-editor>
+                    </div>
+                    <div class="form-group mt-4">
+                        <div class="form-label">Upload Foto</div>
+                        <div class="input-group">
+                          <div class="custom-file">
+                              <input type="file" id="image" name="image" class="custom-file-input" id="foto" name="foto">
+                              <label class="custom-file-label" for="image">Choose file</label>
+                          </div>
+                        </div>       
+                    </div>
+                      <div class="form-group mt-4">
+                          <button type="submit" class="btn btn-success btn-rounded waves-effect waves-light save-category"><span
+                            class="btn-icon-left text-success"><i class="fa fa-plus color-success"></i>
+                        </span>Simpan</button>
+                      </div>
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
